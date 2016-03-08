@@ -127,6 +127,31 @@ npm start
 └── typings.json
 ```
 
+# How to test
+
+## Prerequisites
+
+* install jasmine-core
+
+```
+npm install jasmine-core --save-dev --save-exact
+```
+
+* install live-server
+
+```
+npm install live-server --save-dev --save-exact
+```
+
+## Executing tests
+
+```
+npm test
+```
+
+## Writing test
+
+Have a look at *.spec.ts files.
 
 # Change Log
 
