@@ -73,6 +73,9 @@ System.register(['angular2/testing', 'angular2/platform/testing/browser', 'angul
                 beforeAll(function () {
                     testing_1.setBaseTestProviders(browser_1.TEST_BROWSER_PLATFORM_PROVIDERS, browser_1.TEST_BROWSER_APPLICATION_PROVIDERS);
                 });
+                afterAll(function () {
+                    testing_1.resetBaseTestProviders();
+                });
                 /**
                  * stuff needed to work with router params and MusicService as well... (=> means "depends on"):
                  *

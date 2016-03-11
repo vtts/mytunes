@@ -10,6 +10,7 @@ import {
     TestComponentBuilder,
     ComponentFixture,
     setBaseTestProviders,
+    resetBaseTestProviders,
     FunctionWithParamTokens
 } from 'angular2/testing';
 import {
@@ -30,6 +31,7 @@ import {AlbumComponent} from './album.component'
 import {MusicService} from "./services/music.srv";
 import {Observable} from 'rxjs/Observable';
 import {Album} from "./models/album";
+
 
 class MockMusicService {
     albumInfo(id: string) {
@@ -65,6 +67,11 @@ describe("AlbumComponent", () => {
     beforeAll(() => {
         setBaseTestProviders(TEST_BROWSER_PLATFORM_PROVIDERS, TEST_BROWSER_APPLICATION_PROVIDERS);
     });
+
+    afterAll(() => {
+        resetBaseTestProviders();
+    });
+
 
     /**
      * stuff needed to work with router params and MusicService as well... (=> means "depends on"):
