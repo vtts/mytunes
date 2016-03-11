@@ -7,7 +7,8 @@ System.register([], function(exports_1, context_1) {
         execute: function() {
             User = (function () {
                 function User(authData) {
-                    this.email = authData.password.email;
+                    this.email = authData.email;
+                    this.password = authData.password;
                 }
                 return User;
             }());
