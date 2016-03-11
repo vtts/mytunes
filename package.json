@@ -10,7 +10,8 @@
     "typings": "typings",
     "postinstall": "typings install",
     "test": "live-server --open=unit-tests.html",
-    "karma": "karma start karma.conf.js"
+    "karma": "karma start karma.conf.js",
+    "karma-ci": "karma start karma.conf.js --single-run"
   },
   "license": "ISC",
   "dependencies": {
@@ -22,15 +23,16 @@
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.2",
     "systemjs": "0.19.22",
-    "zone.js": "0.5.15",
+    "zone.js": "0.5.15"
+  },
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "karma-phantomjs-launcher": "^1.0.0",
     "jasmine": "2.4.1",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.2",
     "karma-cli": "^0.1.2",
-    "karma-jasmine": "^0.3.7"
-  },
-  "devDependencies": {
-    "concurrently": "^2.0.0",
+    "karma-jasmine": "^0.3.7",
     "lite-server": "^2.1.0",
     "live-server": "0.9.2",
     "mockfirebase": "^0.12.0",
