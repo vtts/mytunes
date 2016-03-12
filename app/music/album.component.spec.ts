@@ -93,7 +93,6 @@ describe("AlbumComponent", () => {
 
     it("should grab Album according to the id passed in the route", injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
         return tcb.createAsync(AlbumComponent).then((fixture:ComponentFixture) => {
-            fixture.detectChanges();
             let el = fixture.debugElement.componentInstance;
             expect(el.album.id).toBe(1);
         });

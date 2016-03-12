@@ -13,10 +13,6 @@ System.register(['angular2/testing', "./user.srv"], function(exports_1, context_
         execute: function() {
             testing_1.describe("UserService", function () {
                 testing_1.beforeEach(function () { return window["MockFirebase"].override(); });
-                /**
-                 * stuff needed to mock the backend. The Http service is mocked by an object having
-                 * a "useFactory" function returning a new Http object.
-                 */
                 testing_1.beforeEachProviders(function () { return [user_srv_1.UserService]; });
                 testing_1.it("should login the user", testing_1.inject([user_srv_1.UserService], function (userService) {
                     var firebase = userService["_myFirebaseRef"];

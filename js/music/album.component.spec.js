@@ -95,7 +95,6 @@ System.register(['angular2/testing', 'angular2/platform/testing/browser', 'angul
                 ]; });
                 testing_1.it("should grab Album according to the id passed in the route", testing_1.injectAsync([testing_1.TestComponentBuilder], function (tcb) {
                     return tcb.createAsync(album_component_1.AlbumComponent).then(function (fixture) {
-                        fixture.detectChanges();
                         var el = fixture.debugElement.componentInstance;
                         testing_1.expect(el.album.id).toBe(1);
                     });

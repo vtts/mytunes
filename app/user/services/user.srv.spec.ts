@@ -15,10 +15,6 @@ describe("UserService", () => {
 
     beforeEach(() => window["MockFirebase"].override());
 
-    /**
-     * stuff needed to mock the backend. The Http service is mocked by an object having
-     * a "useFactory" function returning a new Http object.
-     */
     beforeEachProviders(() => [UserService]);
 
     it("should login the user", inject([UserService], (userService: UserService) => {
