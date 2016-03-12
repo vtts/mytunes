@@ -1,3 +1,27 @@
+**Table of Contents**
+
+- [Introduction](#)
+- [How to start](#)
+- [Directory Structure](#)
+- [How to test](#)
+	- [Prerequisites](#)
+	- [Executing tests](#)
+	- [Writing tests](#)
+		- [Mocking HTTP backend](#)
+			- [injecting dependencies](#)
+			- [mocking the http response](#)
+			- [writing expectations](#)
+		- [Mocking Firebase](#)
+			- [mocking Firebase](#)
+			- [writing expectations](#)
+		- [Testing components](#)
+			- [base test providers setup](#)
+			- [using injectAsync](#)
+			- [injecting dependencies](#)
+			- [writing expectations](#)
+- [Change Log](#)
+- [License](#)
+
 # Introduction
 
 A seed project for Angular 2 apps.
