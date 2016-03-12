@@ -9,6 +9,7 @@ export class User implements IUser {
     public country:string;
 
     constructor(authData:any) {
-        this.email = authData.password.email;
+        this.email = authData.email;
+        this.password = authData.password;
     }
 }

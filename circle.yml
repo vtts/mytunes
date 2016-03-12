@@ -1,0 +1,8 @@
+checkout:
+  post:
+    - npm install
+    - npm run tsc
+
+test:
+  override:
+    - npm run karma

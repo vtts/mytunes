@@ -44,8 +44,7 @@ System.register(['angular2/core', 'angular2/router', './services/music.srv', './
                 AlbumComponent = __decorate([
                     core_1.Component({
                         selector: 'album-component',
-                        template: "\n        <div class=\"album\" *ngIf=\"album\">\n            <div class=\"page-header\">\n              <h1>{{album.name}} <small>{{ album.artist }}</small></h1>\n            </div>\n            <div class=\"media\">\n              <div class=\"media-left\">\n                <a href=\"#\">\n                  <img class=\"media-object\" [src]=\"album.getImage(albumImageSize)\">\n                </a>\n              </div>\n              <div class=\"media-body\">\n                   <ul *ngFor=\"#song of album.songs\">\n                        <li>{{ song.name}}</li>\n                   </ul>\n              </div>\n            </div>\n        </div>\n    ",
-                        providers: [music_srv_1.MusicService]
+                        template: "\n        <div class=\"album\" *ngIf=\"album\">\n            <div class=\"page-header\">\n              <h1>{{album.name}} <small>{{ album.artist }}</small></h1>\n            </div>\n            <div class=\"media\">\n              <div class=\"media-left\">\n                <a href=\"#\">\n                  <img class=\"media-object\" [src]=\"album.getImage(albumImageSize)\">\n                </a>\n              </div>\n              <div class=\"media-body\">\n                   <ul *ngFor=\"#song of album.songs\">\n                        <li>{{ song.name}}</li>\n                   </ul>\n              </div>\n            </div>\n        </div>\n    "
                     }), 
                     __metadata('design:paramtypes', [music_srv_1.MusicService, router_1.RouteParams])
                 ], AlbumComponent);

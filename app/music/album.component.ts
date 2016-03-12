@@ -24,8 +24,7 @@ import {IAlbum, AlbumImageSize} from './models/ialbum';
               </div>
             </div>
         </div>
-    `,
-    providers : [MusicService]
+    `
 })
 export class AlbumComponent  {
 
