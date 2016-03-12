@@ -362,6 +362,15 @@ class MockMusicService {
 }
 ```
 
+... and then ...
+
+```javascript
+beforeEachProviders(() => [
+    provide(MusicService, {useClass: MockMusicService}),
+    //...
+]);
+```
+
 - injecting RouteParams
 
 If you look at the type description of `RouteParams` you won't see any additional dependencies there. However we need `Router` to inject on our own. Since `Router` itself has further dependencies we need to provide them as well. Some of them needs to provide a mock implementation (e.g. `Location` is injected by using `SpyLocation`). `ROUTER_PRIMARY_COMPONENT` needs to be the main application component (here `AppComponent`). `RouteParams` is injected as instance with id=1. This means that the tested route will be something like "albums/1". Note: if you look at the `MockMusicService` above you will see that `albumInfo(...)` returns the Album with the passed ID (in this case id=1). 
@@ -372,7 +381,8 @@ beforeEachProviders(() => [
     provide(Location, {useClass: SpyLocation}),
     provide(ROUTER_PRIMARY_COMPONENT, {useValue: AppComponent}),
     provide(Router, {useClass: RootRouter}),
-    provide(RouteParams, {useValue: new RouteParams({id: "1"})})
+    provide(RouteParams, {useValue: new RouteParams({id: "1"})}),
+    //...
 ]);
 ```
 
