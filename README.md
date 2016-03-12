@@ -349,7 +349,7 @@ Since our component needs some stuff in its constructor we need to provide them 
 
 - injecting MusicService
 
-The component itself is rendered from the response of the `MusicService#albumInfo` method. `MusicService#albumInfo` makes an http call. In Angular 1.x you would probably mock `$httpBackend`. In our case we can implement a mock. Note that the mock class itself does not inherit from MusicService because this would require us to inject HTTP stuff (what we want to avoid in this case).
+The component itself is rendered from the response of the `MusicService#albumInfo` method. `MusicService#albumInfo` makes an http call. In Angular 1.x you would probably mock `$httpBackend`. In our case we can replace the `MusicService` by the `MockMusicService`. Note that the mock class itself does not inherit from MusicService because this would require us to inject HTTP stuff (what we want to avoid in this case).
 
 ```javascript
 class MockMusicService {
