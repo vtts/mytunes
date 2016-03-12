@@ -1,6 +1,6 @@
 **Table of Contents**
 
-- [Introduction](#)
+- [Introduction](#intro)
 - [How to start](#)
 - [Directory Structure](#)
 - [How to test](#)
@@ -22,7 +22,7 @@
 - [Change Log](#)
 - [License](#)
 
-# Introduction
+# <a name="intro"></a>Introduction
 
 A seed project for Angular 2 apps.
 
